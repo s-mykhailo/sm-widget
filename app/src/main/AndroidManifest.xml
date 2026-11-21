@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- Жодного доступу до мережі -->
+    <uses-permission android:name="android.permission.INTERNET" tools:node="remove"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" tools:node="remove"/>
+
+    <application
+        android:label="SM Widget"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:theme="@style/AppTheme"
+        android:allowBackup="true"
+        android:supportsRtl="true">
+
+        <activity android:name=".MainActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ConfigActivity" android:exported="true"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".PinReceiver" android:exported="false"/>
+
+        <provider android:name=".PhotoProvider" android:authorities="com.sm.widget.photos" android:exported="true"/>
+
+        <receiver android:name=".PhotoWidget" android:exported="true" android:label="SM Фото">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/info_photo"/>
+        </receiver>
+        <receiver android:name=".ClockWidget" android:exported="true" android:label="SM Годинник">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/info_clock"/>
+        </receiver>
+        <receiver android:name=".TextWidget" android:exported="true" android:label="SM Текст">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/info_text"/>
+        </receiver>
+        <receiver android:name=".BatteryWidget" android:exported="true" android:label="SM Батарея">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/info_battery"/>
+        </receiver>
+        <receiver android:name=".ProgressWidget" android:exported="true" android:label="SM Прогрес">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/info_progress"/>
+        </receiver>
+        <receiver android:name=".CountdownWidget" android:exported="true" android:label="SM Відлік">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/info_countdown"/>
+        </receiver>
+    </application>
+</manifest>

@@ -1,0 +1,26 @@
+# Build output
+build/
+*/build/
+.gradle/
+.kotlin/
+.idea/
+*.iml
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Local config
+local.properties
+
+# Signing keys and secrets - never commit
+*.jks
+*.keystore
+*.p12
+keystore.properties
+.env
+.env.*
+
+# Artifacts
+*.apk
+*.aab
+*.dex

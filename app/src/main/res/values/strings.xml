@@ -1,0 +1,8 @@
+<resources>
+    <string name="desc_photo">Твоє фото у будь-якій формі</string>
+    <string name="desc_clock">Годинник і дата у твоєму стилі</string>
+    <string name="desc_text">Будь-який текст: цитата, ім\'я, нагадування</string>
+    <string name="desc_battery">Кільце заряду батареї</string>
+    <string name="desc_progress">Прогрес дня, тижня, місяця чи року</string>
+    <string name="desc_countdown">Скільки днів залишилось до події</string>
+</resources>

@@ -1,0 +1,18 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/bg" android:layout_width="match_parent" android:layout_height="match_parent"
+        android:scaleType="fitXY" android:src="@drawable/bg_r2" android:tint="#E6202124" android:importantForAccessibility="no"/>
+    <LinearLayout android:id="@+id/content" android:layout_width="match_parent" android:layout_height="match_parent"
+        android:orientation="vertical" android:gravity="end|center_vertical" android:padding="14dp">
+        <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+            <ImageView android:id="@+id/image" android:layout_width="match_parent" android:layout_height="match_parent"
+                android:scaleType="fitCenter" android:importantForAccessibility="no"/>
+            <TextView android:id="@+id/line1" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_gravity="center" android:fontFamily="sans-serif-black" android:textSize="22sp" android:textColor="#FFFFFF"
+                android:includeFontPadding="false" android:text="87%"/>
+        </FrameLayout>
+        <TextView android:id="@+id/line2" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black" android:textSize="12sp" android:textColor="#FFFFFF" android:gravity="end|center_vertical"
+            android:includeFontPadding="false" android:layout_marginTop="6dp" android:alpha="0.8" android:maxLines="1" android:text="Батарея"/>
+    </LinearLayout>
+</FrameLayout>
