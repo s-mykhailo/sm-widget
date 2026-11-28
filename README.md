@@ -55,3 +55,13 @@ S-Mykhailo - [@savchenko_mykhailo](https://t.me/savchenko_mykhailo)
 ## License
 
 GPL-3.0-or-later. You can use, change and share this code, but any modified version you distribute must also be open source under the GPL. See [LICENSE](LICENSE).
+
+---
+
+## Автооновлення та автор
+
+Сервіси автооновлюються з GitHub.
+
+- Репозиторій: https://github.com/s-mykhailo/sm-widget
+- Канал: https://t.me/s_mykhailo_dev
+- Автор: https://t.me/savchenko_mykhailo
